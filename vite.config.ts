@@ -6,7 +6,11 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+<<<<<<< HEAD
     base: './',
+=======
+    base: '/flbtt/', // Đã sửa lại đúng chính xác tên kho flbtt của bạn
+>>>>>>> ede3bc7ddcdee6443bcc18391c2ce64f63c042e1
     plugins: [
       react(),
       tailwindcss(),
