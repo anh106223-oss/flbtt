@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/flb/', // Đã sửa lại đúng tên repository của bạn trên GitHub
+    base: '/flbtt/', // Đã sửa lại đúng chính xác tên kho flbtt của bạn
     plugins: [
       react(),
       tailwindcss(),
