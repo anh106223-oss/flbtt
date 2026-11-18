@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "▶ Chạy Web Fleet Battle (Tự mở trình duyệt)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/start-vscode.mjs",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "▶ Chạy Python AI (Terminal)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/python_ai/fleet_battle_ai.py",
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Barlow Condensed', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b1829;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes waterRipple {
+  0% {
+    transform: scale(0.35);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes explosionBurst {
+  0% {
+    transform: scale(0.4);
+    opacity: 1;
+  }
+  55% {
+    transform: scale(1.25);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+@keyframes hitImpactShake {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-4px, 2px, 0); }
+  40% { transform: translate3d(4px, -3px, 0); }
+  60% { transform: translate3d(-3px, -2px, 0); }
+  80% { transform: translate3d(3px, 2px, 0); }
+}
+
+@keyframes sonarPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shipSink {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95) rotate(-1.5deg);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(0.97) rotate(0deg);
+    opacity: 0.72;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4.2s ease-in-out infinite;
+}
+
+.animate-water-ripple {
+  animation: waterRipple 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-explosion-burst {
+  animation: explosionBurst 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hit-shake {
+  animation: hitImpactShake 0.28s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+.animate-sonar-pulse {
+  animation: sonarPulse 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-ship-sink {
+  animation: shipSink 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-water-ripple,
+  .animate-explosion-burst,
+  .animate-hit-shake,
+  .animate-sonar-pulse,
+  .animate-ship-sink {
+    animation: none !important;
+  }
+}
+
+/* Custom subtle scrollbars for fleet drawer */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}

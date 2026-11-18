@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "▶ Chạy Web Fleet Battle (Tự mở trình duyệt)",
+      "type": "shell",
+      "command": "node scripts/start-vscode.mjs",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Chạy Python AI Engine",
+      "type": "shell",
+      "command": "python python_ai/fleet_battle_ai.py",
+      "problemMatcher": []
+    }
+  ]
+}
